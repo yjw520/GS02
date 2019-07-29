@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 创建一个Bean（对象） -->
-    <bean id="userService" class="com.yjw.service.UserService">
+    <bean id="userService" class="com.yjw.service.UserService"  ><!-- scope="prototype" 多例和单例之分 -->
         <!-- 依赖注入数据，调用属性setName方法-->
         <property name="name" value="yjw" ></property>
     </bean>

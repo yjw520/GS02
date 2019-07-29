@@ -6,8 +6,11 @@
       <root url="jar://$PROJECT_DIR$/../../spring/spring   jar/spring-core-5.1.8.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../spring/spring   jar/spring-expression-5.1.8.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../spring/spring   jar/spring-beans-5.1.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../spring/spring-framework-5.1.8.RELEASE/libs/spring-aop-5.1.8.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/spring-beans-5.1.8.RELEASE-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

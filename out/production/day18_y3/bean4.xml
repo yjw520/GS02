@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="programmer" class="com.yjw.model.Programmer">
+        <property name="car">
+            <list>
+                <value>柯尼塞格</value>
+                <value>布加迪威龙</value>
+                <value>兰博基尼</value>
+            </list>
+        </property>
+
+        <property name="pat">
+            <set>
+                <value>小黑</value>
+                <value>小白</value>
+                <value>小红</value>
+            </set>
+        </property>
+
+        <property name="info">
+            <map>
+                <entry key="name" value="yjw"></entry>
+                <entry key="age" value="18"></entry>
+                <entry key="ip" value="127.0.0.1"></entry>
+            </map>
+        </property>
+
+        <!-- properties 注入 -->
+        <property name="mysqlinfo">
+            <props>
+                <prop key="url">mysqk:jdbc://localhost:3306/</prop>
+                <prop key="user">root</prop>
+                <prop key="password">12345678</prop>
+            </props>
+        </property>
+        
+<!--        数组注入-->
+        <property name="fruit">
+            <array>
+                <value>香蕉</value>
+                <value>葡萄</value>
+                <value>苹果</value>
+            </array>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--        xmlns (xml namespace):xml命名空间-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <!-- <bean id="stu" class="com.yjw.model.student">
+        < 相当于调用了public student(String username, String password) 这个构方法
+        <constructor-arg name="username" value="yjw"></constructor-arg>
+        <constructor-arg name="password" value="123"></constructor-arg>
+    </bean>
+        -->
+    <!-- <bean id="stu" class="com.yjw.model.student">
+        相当于调用了public student(String username, int age) 这个构方法
+        <constructor-arg name="username" value="yjw"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+    </bean>
+        -->
+<!--     通过索引加类型给构造方法赋值  -->
+    <!--<bean id="stu" class="com.yjw.model.student">
+        <constructor-arg index="0" value="yjw" type="java.lang.String"></constructor-arg>
+        <constructor-arg index="1" value="18" type="int"></constructor-arg>
+    </bean>-->
+
+<!--    通过set方法往Bean 注入属性值-->
+    <!--<bean id="stu" class="com.yjw.model.student">
+        <property name="username" value="yjw"></property>
+        <property name="password" value="123"></property>
+        <property name="age" value="18"></property>
+    </bean>-->
+
+
+<!--    通过P命名空间注入-->
+    <bean id="stu" class="com.yjw.model.student" p:username="yjw" p:password="123" p:age="20">
+
+    </bean>
+</beans>

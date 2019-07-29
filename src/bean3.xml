@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    SpEL 表达式-->
+    <bean id="address" class="com.yjw.model.Address">
+        <property name="name" value="yy"></property>
+    </bean>
+
+    <bean id="customer" class="com.yjw.model.Customer">
+        <property name="name" value="#{'yjw'.toUpperCase()}"></property>  <!--toUpperCase()转大写-->
+        <property name="pi" value="#{T(java.lang.Math).PI}"></property>
+<!--        <property name="address" ref="address"></property>  一个对象引用另外一个对象-->
+        <property name="address" value="#{address}"></property>
+    </bean>
+</beans>
+
+
